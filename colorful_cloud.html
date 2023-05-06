@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>完整图片</title>
+    <style>
+
+      .container{
+        text-align: center;;
+      }
+
+      #calculate-button{
+        position: absolute;
+        top: 97%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .Pic_Area {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .textArea {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      /* .Pic_Area img {
+  margin: 0;
+  padding: 0;
+} */
+
+      /* p{
+        display:inline;
+        } */
+      a {
+          text-decoration:none;
+          color:black
+        }
+
+
+      .col{
+        height:150px;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+
+    <div class="Pic_Area">
+        <div class="container text-center">
+          <div class="row">
+            <img src="colorful cloud.jpg" alt="">
+    </div>
+</div>
+</div>
+
+    <div class="textArea">
+
+    <p display:inline;>这是某年夏天傍晚我在家里看到的彩云，非常美，希望它能给你带来好运。</p>
+    <br>
+    <p>夏天特别棒，祝你夏天开心！</p>
+
+        </div>
+
+</div>
+
+
+
+
+    </div>
+
+<script type="text/javascript">
+  const Pic_Area = document.querySelector('.Pic_Area'); // 获取容器元素
+  const icy = document.querySelector('#icy'); // 获取按钮元素
+
+  // 添加点击事件监听器
+  icy.addEventListener('click', function() {
+    Pic_Area.classList.toggle('bordered'); // 切换容器边框样式
+  });
+
+</script>
+
+<script type="text/javascript">
+  // 获取所有类名为"r_button"的元素
+  const r_buttons = document.querySelectorAll('.r_button');
+
+  // 初始化分数为0
+  let score = 0;
+
+  // 给每个r_button添加点击事件监听器
+  r_buttons.forEach((r_button) => {
+    r_button.addEventListener('click', () => {
+      score++; // 点击r_button时累加分数
+    });
+  });
+
+  // 给"统计得分"按钮添加点击事件监听器
+  const calculate_button = document.getElementById('calculate-button');
+  calculate_button.addEventListener('click', () => {
+    alert(`得分为${score}分`);
+  });
+
+
+</script>
+
+
+<script type="text/javascript">
+  function showQ2() {
+    var Q1 = document.getElementById("Q1");
+    var Q2 = document.getElementById("Q2");
+    Q1.style.display = "none";
+    Q2.style.display = "block";
+  }
+  function showQ3() {
+    var Q2 = document.getElementById("Q2");
+    var Q3 = document.getElementById("Q3");
+    Q2.style.display = "none";
+    Q3.style.display = "block";
+  }
+  function showQ4() {
+    var Q3 = document.getElementById("Q3");
+    var Q4 = document.getElementById("Q4");
+    Q3.style.display = "none";
+    Q4.style.display = "block";
+  }
+  function showQ5() {
+    var Q4 = document.getElementById("Q4");
+    var Q5 = document.getElementById("Q5");
+    Q4.style.display = "none";
+    Q5.style.display = "block";
+  }
+  function showQ6() {
+    var Q5 = document.getElementById("Q5");
+    var Q6 = document.getElementById("Q6");
+    Q5.style.display = "none";
+    Q6.style.display = "block";
+  }
+  function showQ7() {
+    var Q6 = document.getElementById("Q6");
+    var Q7 = document.getElementById("Q7");
+    Q6.style.display = "none";
+    Q7.style.display = "block";
+  }
+  function showQ8() {
+    var Q7 = document.getElementById("Q7");
+    var Q8 = document.getElementById("Q8");
+    Q7.style.display = "none";
+    Q8.style.display = "block";
+  }
+  function showQ9() {
+    var Q8 = document.getElementById("Q8");
+    var Q9 = document.getElementById("Q9");
+    Q8.style.display = "none";
+    Q9.style.display = "block";
+  }
+  function showQ10() {
+    var Q9 = document.getElementById("Q9");
+    var Q10 = document.getElementById("Q10");
+    Q9.style.display = "none";
+    Q10.style.display = "block";
+  }
+</script>
+
+<script type="text/javascript">
+
+
+  // 选对问题九 选散步 9换9
+  const walking = document.getElementById("walking");
+  const imageQ = document.getElementById("imageQ");
+  walking.addEventListener("click", function() {
+    imageQ.src = "photo9.jpg";
+    imageQ.style.width = "150px";
+    imageQ.style.height = "150px";
+    imageQ.style.top = "200px";  // 这里根据你的实际布局来调整位置
+    imageQ.style.left = "200px";
+    });
+
+    // 选对问题八 选绿色 8换8
+    const green = document.getElementById("green");
+    const imageO = document.getElementById("imageO");
+    green.addEventListener("click", function() {
+      imageO.src = "photo8.jpg";
+      imageO.style.width = "150px";
+      imageO.style.height = "150px";
+      imageO.style.top = "200px";  // 这里根据你的实际布局来调整位置
+      imageO.style.left = "200px";
+      });
+
+      // 选对问题七 选狮子 7换7
+      const lion = document.getElementById("lion");
+      const imageM = document.getElementById("imageM");
+      lion.addEventListener("click", function() {
+        imageM.src = "photo7.jpg";
+        imageM.style.width = "150px";
+        imageM.style.height = "150px";
+        imageM.style.top = "200px";  // 这里根据你的实际布局来调整位置
+        imageM.style.left = "200px";
+        });
+
+
+
+// 选对问题六 选手串 6换6
+const shouchuan = document.getElementById("shouchuan");
+const imageK = document.getElementById("imageK");
+shouchuan.addEventListener("click", function() {
+  imageK.src = "photo6.jpg";
+  imageK.style.width = "150px";
+  imageK.style.height = "150px";
+  imageK.style.top = "200px";  // 这里根据你的实际布局来调整位置
+  imageK.style.left = "200px";
+  });
+
+// 选对问题五 选猫猫 5换5
+const cat = document.getElementById("cat");
+const imageI = document.getElementById("imageI");
+cat.addEventListener("click", function() {
+  imageI.src = "photo5.jpg";
+  imageI.style.width = "150px";
+  imageI.style.height = "150px";
+  imageI.style.top = "200px";  // 这里根据你的实际布局来调整位置
+  imageI.style.left = "200px";
+  });
+
+
+// 选对问题四 选蜂蜜味 4换4
+const honey = document.getElementById("honey");
+const imageG = document.getElementById("imageG");
+honey.addEventListener("click", function() {
+  imageG.src = "photo4.jpg";
+  imageG.style.width = "150px";
+  imageG.style.height = "150px";
+  imageG.style.top = "200px";  // 这里根据你的实际布局来调整位置
+  imageG.style.left = "200px";
+  });
+
+
+// 选对问题三 选微辣 3换3
+const weila = document.getElementById("weila");
+const imageE = document.getElementById("imageE");
+weila.addEventListener("click", function() {
+  imageE.src = "photo3.jpg";
+  imageE.style.width = "150px";
+  imageE.style.height = "150px";
+  imageE.style.top = "200px";  // 这里根据你的实际布局来调整位置
+  imageE.style.left = "200px";
+  });
+
+
+// 选对问题二
+const summer = document.getElementById("summer");
+const imageC = document.getElementById("imageC");
+summer.addEventListener("click", function() {
+  imageC.src = "photo2.jpg";
+  imageC.style.width = "150px";
+  imageC.style.height = "150px";
+  imageC.style.top = "200px";  // 这里根据你的实际布局来调整位置
+  imageC.style.left = "200px";
+});
+
+// 选对问题一 选海南 1换1
+const hn = document.getElementById("hn");
+const imageA = document.getElementById("imageA");
+hn.addEventListener("click", function() {
+  imageA.src = "photo1.jpg";
+  imageA.style.width = "150px";
+  imageA.style.height = "150px";
+  imageA.style.top = "200px";  // 这里根据你的实际布局来调整位置
+  imageA.style.left = "200px";
+});
+
+</script>
+
+<script type="text/javascript">
+  // alert('选择正确！');
+  // alert('选择错误！');
+
+  const r_buttons = document.querySelectorAll(".r_button");
+  const w_buttons = document.querySelectorAll(".w_button");
+
+  // 为r_button绑定点击事件监听器
+  r_buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      alert("选择正确");
+    });
+  });
+
+  // 为w_button绑定点击事件监听器
+  w_buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      alert("选择错误");
+    });
+  });
+
+</script>
+
+
+  </body>
+</html>

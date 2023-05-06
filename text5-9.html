@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+
+      .container{
+        text-align: center;;
+      }
+
+      .question {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      #calculate-button{
+        position: absolute;
+        top: 90%;
+        left: 80%;
+        transform: translate(-50%, -50%);
+      }
+      #picture{
+        position: absolute;
+        top: 95%;
+        left: 80%;
+        transform: translate(-50%, -50%);
+      }
+      .Pic_Area {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      /* .Pic_Area img {
+  margin: 0;
+  padding: 0;
+} */
+
+      p{
+        display:inline;
+        }
+      p:hover{
+          color:red;
+        }
+      a {
+          text-decoration:none;
+          color:black
+        }
+      .w_button{
+      border:none;
+      background:none;
+      font-size: 30px;
+      }
+      .w_button:hover {
+        color: red;
+      }
+      .r_button{
+      border:none;
+      background:none;
+      font-size: 30px;
+      }
+      .r_button:hover {
+        color: red;
+      }
+      #imageB{
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+      }
+      .bordered {
+        border: 10px solid #C2E6FE;
+      }
+      .col{
+        height:150px;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+
+    <div class="Pic_Area">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col order-last">
+              <!-- 选对问题一 -->
+              <img id="imageA" src="1.png" />
+              <img  id="imageB" src="photo1.jpg" style="display:none" />
+
+              <!-- 选对问题二 -->
+              <img id="imageC" src="2.png" alt="imageC">
+              <img style="width:150px;height:150px;display:none" id="imageD" src="photo2.jpg">
+
+              <!-- 选对问题三 -->
+              <img id="imageE" src="3.png" alt="imageE">
+              <img style="width:150px;height:150px;display:none" id="imageF" src="photo3.jpg">
+
+
+              <!-- <img src="D:\B-coding\mid_term\img\2.png" style="width:150px;height:150px;" alt=""> -->
+              <!-- <img src="D:\B-coding\mid_term\img\3.png" style="width:150px;height:150px;" alt="> -->
+            </div>
+            <div class="col">
+              <!-- 选对问题四 -->
+              <img id="imageG" src="4.png" />
+              <img  id="imageH" src="photo4.jpg" style="width:150px;height:150px;display:none">
+
+              <!-- 选对问题五 -->
+              <img id="imageI" src="5.png" />
+              <img  id="imageJ" src="photo5.jpg" style="width:150px;height:150px;display:none">
+
+              <!-- 选对问题六 -->
+              <img id="imageK" src="6.png" />
+              <img  id="imageL" src="photo6.jpg" style="width:150px;height:150px;display:none">
+            </div>
+            <div class="col order-first">
+              <!-- 选对问题七 -->
+              <img id="imageM" src="7.png" />
+              <img  id="imageN" src="photo7.jpg" style="width:150px;height:150px;display:none">
+
+              <!-- 选对问题八 -->
+              <img id="imageO" src="8.png" />
+              <img  id="imageP" src="photo8.jpg" style="width:150px;height:150px;display:none">
+
+              <!-- 选对问题九 -->
+              <img id="imageQ" src="9.png" />
+              <img  id="imageR" src="photo9.jpg" style="width:150px;height:150px;display:none">
+
+            </div>
+          </div>
+        </div>
+    </div>
+
+<div class="question_area">
+
+
+<!-- 问题一 -->
+    <div class="question" id="Q1">
+      <h3 style="font-size:45px;font-weight:bold;">Q1.我来自哪里</h3>
+      <div class="button">
+      <a href="#Q2"><button class="w_button" id="gd" onclick="showQ2();alert('选择错误！')">广东</button></a>
+      <a href="#Q2"><button class="w_button" id="gx" onclick="showQ2();alert('选择错误！')">广西</button></a>
+      <a href="#Q2"><button class="w_button" id="fj" onclick="showQ2();alert('选择错误！')">福建</button></a>
+      <a href="#Q2"><button class="r_button" id="hn" onclick="showQ2();replaceImage();alert('选择正确！' )">海南</button></a>
+</div>
+    </div>
+
+<!-- 问题二 -->
+    <div class="question" id="Q2" style="display:none;">
+      <h3 style="font-size:45px;font-weight:bold;">Q2.我最喜欢什么季节</h3>
+      <div class="button">
+        <a href="#Q3"><button class="w_button" id="spring" onclick="showQ3();alert('选择错误！')">春天</button></a>
+        <a href="#Q3"><button class="r_button" id="summer" onclick="showQ3();replaceImage();alert('选择正确！' )">夏天</button></a>
+          <a href="#Q3"><button class="w_button" id="fall" onclick="showQ3();alert('选择错误！')">秋天</button></a>
+        <a href="#Q3"><button class="w_button" id="winter" onclick="showQ3();alert('选择错误！')">冬天</button></a>
+
+
+        </div>
+
+      </div>
+
+  <!-- 问题三 -->
+      <div class="question" id="Q3" style="display:none;">
+        <h3 style="font-size:45px;font-weight:bold;">Q3.我的星座是</h3>
+        <div class="button">
+
+          <a href="#Q4"><button class="w_button" id="chunv" onclick="showQ4();alert('选择错误！')">处女座</button></a>
+          <a href="#Q4"><button class="w_button" id="juxie" onclick="showQ4();alert('选择错误！')">巨蟹座</button></a>
+          <a href="#Q4"><button class="w_button" id="tianping" onclick="showQ4();alert('选择错误！')">天秤座</button></a>
+          <a href="#Q4"><button class="r_button" id="lion" onclick="showQ4();replaceImage();alert('选择正确！' )">狮子座</button></a>
+
+        </div>
+      </div>
+
+    <!-- 问题四 -->
+    <div class="question" id="Q4" style="display:none;">
+      <h3 style="font-size:45px;font-weight:bold;">Q4.我最喜欢的动物是</h3>
+      <div class="button">
+
+        <a href="#Q5"><button class="w_button" id="dog" onclick="showQ5();alert('选择错误！')">狗狗</button></a>
+        <a href="#Q5"><button class="w_button" id="wugui" onclick="showQ5();alert('选择错误！')">乌龟</button></a>
+        <a href="#Q5"><button class="r_button" id="cat" onclick="showQ5();replaceImage();alert('选择正确！' )">猫猫</button></a>
+        <a href="#Q5"><button class="w_button" id="rabbit" onclick="showQ5();alert('选择错误！')">兔子</button></a>
+
+          </div>
+    </div>
+
+
+<!-- 问题五-->
+<div class="question" id="Q5" style="display:none;">
+  <h3 style="font-size:45px;font-weight:bold;">Q5.我会做饭吗</h3>
+  <div class="button">
+
+    <a href="#Q6"><button class="w_button" id="yiqiaobutong" onclick="showQ6();alert('选择错误！')">一窍不通</button></a>
+    <a href="#Q6"><button class="r_button" id="onlyme" onclick="showQ6();replaceImage();alert('选择正确！' )">只能本人食</button></a>
+    <!-- <a href="#Q6"><button class="w_button" id="ring" onclick="showQ6();alert('选择错误！')">只能本人食</button></a> -->
+    <a href="#Q6"><button class="w_button" id="rabbit" onclick="showQ6();alert('选择错误！')">还不错</button></a>
+    <a href="#Q6"><button class="w_button" id="rabbit" onclick="showQ6();alert('选择错误！')">超会做</button></a>
+    <!-- <a href="#Q6"><button class="r_button" id="shouchuan" onclick="showQ6();replaceImage();alert('选择正确！' )">超会做</button></a> -->
+  </div>
+</div>
+
+<!-- 问题六 不知道吃什么的时候我会选择吃什么-->
+<div class="question" id="Q6" style="display:none;">
+  <h3 style="font-size:40px;font-weight:bold;">Q6.不知道吃什么的时候我会选择吃什么</h3>
+  <div class="button">
+    <a href="#Q7"><button class="r_button" id="dumpling" onclick="showQ7();replaceImage();alert('选择正确！' )">饺子</button></a>
+    <a href="#Q7"><button class="w_button" id="rice" onclick="showQ7();alert('选择错误！')">蛋炒饭</button></a>
+    <a href="#Q7"><button class="w_button" id="noddle" onclick="showQ7();alert('选择错误！')">泡面</button></a>
+    <a href="#Q7"><button class="w_button" id="bread" onclick="showQ7();alert('选择错误！')">面包</button></a>
+    <!-- <a href="#Q6"><button class="r_button" id="shouchuan" onclick="showQ6();replaceImage();alert('选择正确！' )">超会做</button></a> -->
+  </div>
+</div>
+
+<!-- 问题七 我喜欢喝多少度的水 -->
+<div class="question" id="Q7" style="display:none;">
+  <h3 style="font-size:45px;font-weight:bold;">Q7.我喜欢喝多少度的水</h3>
+  <div class="button">
+    <a href="#Q8"><button class="w_button" id="hot" onclick="showQ8();alert('选择错误！')">热水</button></a>
+    <a href="#Q8"><button class="w_button" id="warm" onclick="showQ8();alert('选择错误！')">温水</button></a>
+    <a href="#Q8"><button class="r_button" id="cool" onclick="showQ8();replaceImage();alert('选择正确！' )">凉水</button></a>
+    <a href="#Q8"><button class="w_button" id="icy" onclick="showQ8();alert('选择错误！')">冰水</button></a>
+  </div>
+</div>
+
+<!-- 问题八 我最喜欢的交通工具 -->
+<div class="question" id="Q8" style="display:none;">
+  <h3 style="font-size:45px;font-weight:bold;">Q8.我最喜欢的交通工具</h3>
+  <div class="button">
+    <a href="#Q9"><button class="w_button" id="leg" onclick="showQ9();alert('选择错误！')">我的腿</button></a>
+    <a href="#Q9"><button class="w_button" id="bike" onclick="showQ9();alert('选择错误！')">自行车</button></a>
+    <a href="#Q9"><button class="r_button" id="diandongche" onclick="showQ9();replaceImage();alert('选择正确！' )">电动车</button></a>
+    <a href="#Q9"><button class="w_button" id="motuo" onclick="showQ9();alert('选择错误！')">摩托车</button></a>
+  </div>
+</div>
+
+<!-- 问题九 我平时喜欢看什么类型的视频 -->
+<div class="question" id="Q9" style="display:none;">
+  <h3 style="font-size:45px;font-weight:bold;">Q9.我平时喜欢看什么类型的视频</h3>
+  <div class="button">
+    <a href="#Q10"><button class="w_button" id="ju" onclick="showQ10();alert('选择错误！')">电视剧</button></a>
+    <a href="#Q10"><button class="w_button" id="movie" onclick="showQ10();alert('选择错误！')">电影</button></a>
+    <a href="#Q10"><button class="w_button" id="jilupian" onclick="showQ10();alert('选择错误！')">纪录片</button></a>
+    <a href="#Q10"><button class="r_button" id="dongman" onclick="showQ10();replaceImage();alert('选择正确！' )">动漫</button></a>
+  </div>
+</div>
+
+<!-- 问题十 我更倾向于在哪里过周末 -->
+<div class="question" id="Q10" style="display:none;">
+  <h3 style="font-size:45px;font-weight:bold;">Q10.我更倾向于在哪里过周末</h3>
+  <div class="button">
+    <a href="#Q10"><button class="r_button" id="park" onclick="showQ10();replaceImage();alert('选择正确！' )">公园</button></a>
+    <a href="#Q10"><button class="w_button" id="mall" onclick="showQ10();alert('选择错误！')">商场</button></a>
+    <a href="#Q10"><button class="w_button" id="cinema" onclick="showQ10();alert('选择错误！')">影院</button></a>
+    <a href="#Q10"><button class="w_button" id="home" onclick="showQ10();alert('选择错误！')">家里</button></a>
+  </div>
+</div>
+
+</div>
+
+
+<div class="button">
+  <button id="calculate-button" >统计得分</button>
+</div>
+<div class="button">
+  <a href="colorful_cloud.html" target="_blank"><button id="picture" >查看完整图片</button></a>
+
+</div>
+
+    </div>
+
+
+<!-- 答对第十题出现边框 -->
+<script type="text/javascript">
+  const Pic_Area = document.querySelector('.Pic_Area'); // 获取容器元素
+  const park = document.querySelector('#park'); // 获取按钮元素
+  // 添加点击事件监听器
+  park.addEventListener('click', function() {
+    Pic_Area.classList.toggle('bordered'); // 切换容器边框样式
+  });
+</script>
+
+<!-- 计分 -->
+<script type="text/javascript">
+  // 获取所有类名为"r_button"的元素
+  const r_buttons = document.querySelectorAll('.r_button');
+  // 初始化分数为0
+  let score = 0;
+  // 给每个r_button添加点击事件监听器
+  r_buttons.forEach((r_button) => {
+    r_button.addEventListener('click', () => {
+      score++; // 点击r_button时累加分数
+    });
+  });
+  // 给"统计得分"按钮添加点击事件监听器
+  const calculate_button = document.getElementById('calculate-button');
+  calculate_button.addEventListener('click', () => {
+    alert(`得分为${score}分`);
+  });
+</script>
+
+
+<script type="text/javascript">
+  function showQ2() {
+    var Q1 = document.getElementById("Q1");
+    var Q2 = document.getElementById("Q2");
+    Q1.style.display = "none";
+    Q2.style.display = "block";
+  }
+  function showQ3() {
+    var Q2 = document.getElementById("Q2");
+    var Q3 = document.getElementById("Q3");
+    Q2.style.display = "none";
+    Q3.style.display = "block";
+  }
+  function showQ4() {
+    var Q3 = document.getElementById("Q3");
+    var Q4 = document.getElementById("Q4");
+    Q3.style.display = "none";
+    Q4.style.display = "block";
+  }
+  function showQ5() {
+    var Q4 = document.getElementById("Q4");
+    var Q5 = document.getElementById("Q5");
+    Q4.style.display = "none";
+    Q5.style.display = "block";
+  }
+  function showQ6() {
+    var Q5 = document.getElementById("Q5");
+    var Q6 = document.getElementById("Q6");
+    Q5.style.display = "none";
+    Q6.style.display = "block";
+  }
+  function showQ7() {
+    var Q6 = document.getElementById("Q6");
+    var Q7 = document.getElementById("Q7");
+    Q6.style.display = "none";
+    Q7.style.display = "block";
+  }
+  function showQ8() {
+    var Q7 = document.getElementById("Q7");
+    var Q8 = document.getElementById("Q8");
+    Q7.style.display = "none";
+    Q8.style.display = "block";
+  }
+  function showQ9() {
+    var Q8 = document.getElementById("Q8");
+    var Q9 = document.getElementById("Q9");
+    Q8.style.display = "none";
+    Q9.style.display = "block";
+  }
+  function showQ10() {
+    var Q9 = document.getElementById("Q9");
+    var Q10 = document.getElementById("Q10");
+    Q9.style.display = "none";
+    Q10.style.display = "block";
+  }
+</script>
+
+<script type="text/javascript">
+
+
+  // 选对问题九 选动漫 9换9
+  const dongman = document.getElementById("dongman");
+  const imageQ = document.getElementById("imageQ");
+  dongman.addEventListener("click", function() {
+    imageQ.src = "photo9.jpg";
+    imageQ.style.width = "150px";
+    imageQ.style.height = "150px";
+    imageQ.style.top = "200px";  // 这里根据你的实际布局来调整位置
+    imageQ.style.left = "200px";
+    });
+
+    // 选对问题八 选电动车 8换8
+    const diandongche = document.getElementById("diandongche");
+    const imageO = document.getElementById("imageO");
+    diandongche.addEventListener("click", function() {
+      imageO.src = "photo8.jpg";
+      imageO.style.width = "150px";
+      imageO.style.height = "150px";
+      imageO.style.top = "200px";  // 这里根据你的实际布局来调整位置
+      imageO.style.left = "200px";
+      });
+
+      // 选对问题七 选凉水 7换7
+      const cool = document.getElementById("cool");
+      const imageM = document.getElementById("imageM");
+      cool.addEventListener("click", function() {
+        imageM.src = "photo7.jpg";
+        imageM.style.width = "150px";
+        imageM.style.height = "150px";
+        imageM.style.top = "200px";  // 这里根据你的实际布局来调整位置
+        imageM.style.left = "200px";
+        });
+
+
+
+// 选对问题六 选饺子 6换6
+const dumpling = document.getElementById("dumpling");
+const imageK = document.getElementById("imageK");
+dumpling.addEventListener("click", function() {
+  imageK.src = "photo6.jpg";
+  imageK.style.width = "150px";
+  imageK.style.height = "150px";
+  imageK.style.top = "200px";  // 这里根据你的实际布局来调整位置
+  imageK.style.left = "200px";
+  });
+
+// 选对问题五 选只能本人食 5换5
+const onlyme = document.getElementById("onlyme");
+const imageI = document.getElementById("imageI");
+onlyme.addEventListener("click", function() {
+  imageI.src = "photo5.jpg";
+  imageI.style.width = "150px";
+  imageI.style.height = "150px";
+  imageI.style.top = "200px";  // 这里根据你的实际布局来调整位置
+  imageI.style.left = "200px";
+  });
+
+
+// 选对问题四 选猫猫 4换4
+const cat = document.getElementById("cat");
+const imageG = document.getElementById("imageG");
+cat.addEventListener("click", function() {
+  imageG.src = "photo4.jpg";
+  imageG.style.width = "150px";
+  imageG.style.height = "150px";
+  imageG.style.top = "200px";  // 这里根据你的实际布局来调整位置
+  imageG.style.left = "200px";
+  });
+
+
+// 选对问题三 选lion 3换3
+const lion = document.getElementById("lion");
+const imageE = document.getElementById("imageE");
+lion.addEventListener("click", function() {
+  imageE.src = "photo3.jpg";
+  imageE.style.width = "150px";
+  imageE.style.height = "150px";
+  imageE.style.top = "200px";  // 这里根据你的实际布局来调整位置
+  imageE.style.left = "200px";
+  });
+
+
+// 选对问题二
+const summer = document.getElementById("summer");
+const imageC = document.getElementById("imageC");
+summer.addEventListener("click", function() {
+  imageC.src = "photo2.jpg";
+  imageC.style.width = "150px";
+  imageC.style.height = "150px";
+  imageC.style.top = "200px";  // 这里根据你的实际布局来调整位置
+  imageC.style.left = "200px";
+});
+
+// 选对问题一 选海南 1换1
+const hn = document.getElementById("hn");
+const imageA = document.getElementById("imageA");
+hn.addEventListener("click", function() {
+  imageA.src = "photo1.jpg";
+  imageA.style.width = "150px";
+  imageA.style.height = "150px";
+  imageA.style.top = "200px";  // 这里根据你的实际布局来调整位置
+  imageA.style.left = "200px";
+});
+
+</script>
+
+<script type="text/javascript">
+  // alert('选择正确！');
+  // alert('选择错误！');
+
+  const r_buttons = document.querySelectorAll(".r_button");
+  const w_buttons = document.querySelectorAll(".w_button");
+
+  // 为r_button绑定点击事件监听器
+  r_buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      alert("选择正确");
+    });
+  });
+
+  // 为w_button绑定点击事件监听器
+  w_buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      alert("选择错误");
+    });
+  });
+
+</script>
+
+
+  </body>
+</html>
