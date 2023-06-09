@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <!-- 必须的 meta 标签 -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap 的 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- JavaScript 文件是可选的。从以下两种建议中选择一个即可！ -->
+
+    <!-- 选项 1：jQuery 和 Bootstrap 集成包（集成了 Popper） -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- 选项 2：Popper 和 Bootstrap 的 JS 插件各自独立 -->
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-Lge2E2XotzMiwH69/MXB72yLpwyENMiOKX8zS8Qo7LDCvaBIWGL+GlRQEKIpYR04" crossorigin="anonymous"></script> -->
+
+<style media="screen">
+  .footer{
+    text-align: center;
+  }
+</style>
+
+    <title>机智生活系列电视剧</title>
+  </head>
+  <body>
+
+<!-- navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">机智生活系列电视剧</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="myWork.html" >首页 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="JiJian.html" target="_blank">机监 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item" active>
+        <a class="nav-link" href="JiYi1.html" target="_blank">机医1 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="JiYi2.html" target="_blank">机医2 <span class="sr-only">(current)</span></a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+<!-- image slider -->
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/bg1.png" class="d-block w-100" alt="..." width="100%" height="auto" >
+      <div class="carousel-caption">
+        <h1 class="display-2">机智的监狱生活</h1>
+
+        <a href="JiJian.html" target="_blank">
+          <button type="button" class="btn btn-light">点击进入</button>
+        </a>
+
+
+        <!-- <button type="button" name="btn btn-outline-light btn-lg">start</button> -->
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/bg2-2.jpg" class="d-block w-100" alt="..." >
+      <div class="carousel-caption">
+        <h1 class="display-2">机智的医生生活1</h1>
+        <a href="JiYi1.html" target="_blank">
+          <button type="button" class="btn btn-light">点击进入</button>
+        </a>
+
+        <!-- <button type="button" name="btn btn-outline-light btn-lg">start</button> -->
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/bg3.jpeg" class="d-block w-100" alt="...">
+      <div class="carousel-caption">
+        <h1 class="display-2">机智的医生生活2</h1>
+        <a href="JiYi2.html" target="_blank">
+          <button type="button" class="btn btn-light">点击进入</button>
+        </a>
+
+        <!-- <button type="button" name="btn btn-outline-light btn-lg">start</button> -->
+      </div>
+    </div>
+  </div>
+ <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </button>
+</div>
+
+<!-- 栅格系统 -->
+<!-- <div class="container-fluid">
+  <div class="row jumbotron">
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10 ">
+      <p class="lead">广告歌曲是为了推广某个品牌、产品或服务而创作的音乐作品，常用于广告、宣传片、商业活动等，具备在短时间内吸引消费者的特点，可让消费者对产品或服务产生印象，以达到宣传推销的目的。广告歌曲一般具有简单易记、节奏感强、旋律简单、歌词易懂、容易让消费者产生共鸣等特点，以提高广告的曝光量和销售效果。</p>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2 ">
+      <a href="#"><button type="button" class="btn btn-outline-light btn-lg ">web hosting</button></a>
+    </div>
+  </div>
+</div> -->
+
+<!-- welcome section -->
+<!-- <div class="container-fluid">
+  <div class="row text-center">
+  <div class="col-12">
+    <h1 class="display-4"> build with ease</h1>
+  </div>
+  <div class="col-12">
+    <p class="lead"> 广告歌曲是为了推广某个品牌、产品或服务而创作的音乐作品，常用于广告、宣传片、商业活动等，具备在短时间内吸引消费者的特点，可让消费者对产品或服务产生印象，以达到宣传推销的目的。广告歌曲一般具有简单易记、节奏感强、旋律简单、歌词易懂、容易让消费者产生共鸣等特点，以提高广告的曝光量和销售效果。</p>
+  </div>
+  </div>
+</div> -->
+
+<!-- two column section -->
+<!-- <div class="container-fluid">
+  <div class="row">
+  <div class="col-lg-6">
+    <h1 class="display-4"> build with ease</h1>
+    <p> 广告歌曲是为了推广某个品牌、产品或服务而创作的音乐作品，常用于广告、宣传片、商业活动等，具备在短时间内吸引消费者的特点，可让消费者对产品或服务产生印象，以达到宣传推销的目的。广告歌曲一般具有简单易记、节奏感强、旋律简单、歌词易懂、容易让消费者产生共鸣等特点，以提高广告的曝光量和销售效果。</p>
+    <br>
+  </div>
+  <div class="col-lg-6">
+    <img src="img/p1.jpg" alt="" class="img-fluid">
+    <br>
+  </div>
+  </div>
+</div> -->
+
+<!-- fixed background -->
+
+<!-- footer -->
+<footer>
+<div class="container-fluid">
+  <div class="row text-center">
+    <div class="col-12">
+      <hr class="light">
+      <p>所有素材均来自网络</p>
+      <p>网页结构参考：http://courses.cuc.edu.cn/course/102702/learning-activity/full-screen#/540519</p>
+
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>
