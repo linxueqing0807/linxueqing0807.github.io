@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>私信界面</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: eStartup
+  * Updated: May 30 2023 with Bootstrap v5.3.0
+  * Template URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+<!-- 问题+发私信 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<style media="screen">
+  /* 发送私信 */
+  .message-container {
+    padding: 10px;
+  }
+
+  .message {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+
+  .message .message-bubble {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 70%;
+  }
+
+  .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .interest-container,
+  .chat-container {
+    padding: 10px;
+  }
+
+  /* 添加样式以隐藏预选界面 */
+  .hidden {
+    display: none;
+  }
+
+  /* 发布邀请 */
+  .custom-modal-title {
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .custom-modal-body input,
+  .custom-modal-body textarea {
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 8px;
+    width: 100%;
+  }
+
+  .custom-modal-body input:focus,
+  .custom-modal-body textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px #ccc;
+  }
+
+  .custom-modal-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    padding: 10px;
+    text-align: right;
+  }
+
+</style>
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div id="logo">
+        <h1><a href="index.html"><span>KaCa</span>KaCa </a></h1>
+        <p style="font-size: 16px; color: #555; margin-top: 5px;">中传约拍平台</p>
+
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li>
+            <a class="nav-link scrollto active" href="1/first.html"
+              style="color: #4e4039;"
+              onmouseover="this.style.color='#71c55d';"
+              onmouseout="this.style.color='#4e4039';">
+              首页
+            </a>
+          </li>
+          <li class="dropdown"><a href="#"><span>“寻约”</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="page1-1.html">寻找摄影师</a></li>
+              <li><a href="page2-1.html">寻找模特</a></li>
+            </ul>
+          </li>
+
+          <li><a class="nav-link scrollto" href="1/first.html#about-us">关于我们</a></li>
+          <li><a class="nav-link scrollto" href="1/first.html#newsletter">登录/注册</a></li>
+          <li><a class="nav-link scrollto" href="page1-5.html">个人中心</a></li>
+          <li><a class="nav-link scrollto" data-toggle="modal" data-target="#myModal" href="page1-6.html">发布邀请</a></li>
+
+            </ul>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+<main id="main">
+    <!-- <!-== Contact Section 联系我们——私信界面======= -->
+    <section id="contact" class="padd-section" style="padding-top:125px;"justify="center" height="auto;">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+          <h2>私信——摄影师昵称</h2>
+          <p class="separator">与陌生人聊天请保持警惕，防止上当受骗</p>
+        </div>
+
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+
+
+
+          <!-- 预选和发送私信——html代码 -->
+          <div class="container main-container">
+            <div id="interest-container" class="container">
+              <!-- 预选界面代码 -->
+              <div class="row">
+                <div class="col-md-6 offset-md-3">
+                  <h1>请选择您的约拍偏好/需求</h1>
+                  <form id="interest-form">
+                    <div class="mb-3">
+                      <!-- <label for="interest-checkbox">请选择：</label> -->
+
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="interest" id="interest2" value="互勉">
+                        <label class="form-check-label" for="interest2">
+                          互免
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="interest" id="interest3" value="低酬">
+                        <label class="form-check-label" for="interest3">
+                          低酬
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="interest" id="interest1" value="有偿">
+                        <label class="form-check-label" for="interest1">
+                          有偿
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="interest" id="interest1" value="自带设备">
+                        <label class="form-check-label" for="interest1">
+                          自带设备
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="interest" id="interest1" value="自备妆造">
+                        <label class="form-check-label" for="interest1">
+                          自备妆造
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="interest" id="interest1" value="周末拍摄">
+                        <label class="form-check-label" for="interest1">
+                          周末拍摄
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="interest" id="interest1" value="周中拍摄">
+                        <label class="form-check-label" for="interest1">
+                          周中拍摄
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="interest" id="interest1" value="校外拍摄">
+                        <label class="form-check-label" for="interest1">
+                          校外拍摄
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="interest" id="interest1" value="校内拍摄">
+                        <label class="form-check-label" for="interest1">
+                          校内拍摄
+                        </label>
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="start-chat-btn" style="background-color:#71c55d;">进入聊天</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- 显示预选结果 -->
+            <div id="result-container" class="container mt-3 hidden">
+              <div class="row">
+                <div class="col-md-6 offset-md-3">
+                  <h1>约拍偏好</h1>
+                  <ul id="interest-result"></ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- 普通私信 -->
+            <div id="chat-container" class="container mt-3 hidden">
+              <!-- 私信界面代码 -->
+              <div class="row">
+                <div class="col-md-6 offset-md-3">
+                  <h1>私信</h1>
+                  <div id="message-container" class="message-container" style="height: 300px; overflow-y: scroll;"></div>
+                  <form id="message-form">
+                    <div class="mb-3">
+                      <input type="text" class="form-control" id="message-input" placeholder="输入消息">
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="background-color:#71c55d;">发送</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- 返回上一页 -->
+            <!-- <div class="d-flex justify-content-end">
+    <button type="submit" class="btn btn-primary">返回</button>
+  </div> -->
+
+
+
+
+
+  </div>
+</div>
+
+
+            <!-- <div class="container mt-3" style=" display: flex; justify-content: flex-end;">
+              <button class="btn btn-primary" onclick="goBack()">返回上页</button>
+            </div> -->
+
+          </div>
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+</main>
+
+<!-- ======= Footer ======= -->
+<footer class="footer">
+  <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+  </div>
+    <div class="copyrights">
+      <div class="container">
+        <p>&copy; Copyrights eStartup. All rights reserved.</p>
+        <div class="credits">
+          <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eStartup
+        -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          <p>本站部分图片源自网络，如有侵权，请您立即联系我们删除，感谢您的理解</p>
+
+        </div>
+
+      </div>
+    </div>
+
+  </footer>
+  <!-- End  Footer -->
+
+  <!-- 发布邀请 -->
+  <!-- 弹窗结构 -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+
+        <div class="modal-body custom-modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="title" class="form-label">身份（摄影师/模特）</label>
+              <input type="text" class="form-control" id="title" placeholder="请输入标题">
+            </div>
+            <div class="mb-3">
+              <label for="title" class="form-label">时间</label>
+              <input type="text" class="form-control" id="title" placeholder="请输入标题">
+            </div>
+            <div class="mb-3">
+              <label for="title" class="form-label">地点</label>
+              <input type="text" class="form-control" id="title" placeholder="请输入标题">
+            </div>
+            <div class="mb-3">
+              <label for="title" class="form-label">标题</label>
+              <input type="text" class="form-control" id="title" placeholder="请输入标题">
+            </div>
+            <div class="mb-3">
+              <label for="content" class="form-label">正文</label>
+              <textarea class="form-control" id="content" rows="3" placeholder="请输入正文"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="imageUpload" class="form-label">选择图片上传</label>
+              <input type="file" class="form-control-file" id="imageUpload">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+          <button type="button" class="btn btn-primary" id="publishButton">发布</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <!-- 预选和发送私信——JS部分代码 -->
+  <script type="text/javascript">
+    document.getElementById('message-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      var messageInput = document.getElementById('message-input');
+      var messageContainer = document.getElementById('message-container');
+
+      var message = messageInput.value;
+      if (message.trim() !== '') {
+        var messageElement = document.createElement('div');
+        messageElement.classList.add('message');
+
+        var messageBubble = document.createElement('div');
+        messageBubble.classList.add('message-bubble');
+        messageBubble.textContent = message;
+
+        messageElement.appendChild(messageBubble);
+        messageContainer.appendChild(messageElement);
+
+        messageInput.value = '';
+        messageInput.focus();
+      }
+    });
+
+    document.getElementById('start-chat-btn').addEventListener('click', function() {
+      showResults();
+      document.getElementById('interest-container').classList.add('hidden');
+      document.getElementById('chat-container').classList.remove('hidden');
+    });
+
+    function showResults() {
+      var interestForm = document.getElementById('interest-form');
+      var interests = [];
+      var resultContainer = document.getElementById('result-container');
+      var interestResult = document.getElementById('interest-result');
+
+      interestResult.innerHTML = '';
+
+      for (var i = 0; i < interestForm.length; i++) {
+        if (interestForm[i].type === 'checkbox' && interestForm[i].checked) {
+          interests.push(interestForm[i].value);
+          var interestItem = document.createElement('li');
+          interestItem.textContent = interestForm[i].value;
+          interestResult.appendChild(interestItem);
+        }
+      }
+
+      if (interests.length === 0) {
+        var interestItem = document.createElement('li');
+        interestItem.textContent = "没有选择任何领域";
+        interestResult.appendChild(interestItem);
+      }
+
+      resultContainer.classList.remove('hidden');
+    }
+
+// 返回上一页
+function goBack() {
+window.history.back();
+}
+  </script>
+
+  <!-- 发布邀请 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.getElementById("publishButton").addEventListener("click", function() {
+      // 这里可以添加发布逻辑，例如获取输入的标题、正文和图片信息，并将其提交到后台
+      var title = document.getElementById("title").value;
+      var content = document.getElementById("content").value;
+      var image = document.getElementById("imageUpload").files[0];
+
+      // 在这里执行上传图片的操作，可以使用XMLHttpRequest或fetch API等进行异步请求
+      // 以下只是一个简单的示例，可以根据需要进行修改
+      var formData = new FormData();
+      formData.append("title", title);
+      formData.append("content", content);
+      formData.append("image", image);
+
+      // 使用fetch API进行异步请求
+      fetch("your-upload-endpoint", {
+        method: "POST",
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        // 处理服务器返回的响应数据
+        console.log(data);
+        // 如果需要，可以在这里进行页面重定向或其他操作
+      })
+      .catch(error => {
+        // 处理错误
+        console.error(error);
+      });
+    });
+  </script>
+
+</body>
+
+</body>
+
+</html>

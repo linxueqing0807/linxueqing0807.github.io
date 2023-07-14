@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>page1-6发布邀请</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: eStartup
+  * Updated: May 30 2023 with Bootstrap v5.3.0
+  * Template URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+
+      /* 发布邀请 */
+      .custom-modal-title {
+        color: #333;
+        font-family: Arial, sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .custom-modal-body input,
+      .custom-modal-body textarea {
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        padding: 8px;
+        width: 100%;
+      }
+
+      .custom-modal-body input:focus,
+      .custom-modal-body textarea:focus {
+        outline: none;
+        box-shadow: 0 0 5px #ccc;
+      }
+
+      .custom-modal-footer {
+        background-color: #f8f9fa;
+        border-top: 1px solid #dee2e6;
+        padding: 10px;
+        text-align: right;
+      }
+
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div id="logo">
+        <h1><a href="index.html"><span>KaCa</span>KaCa </a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="1/first.html">首页</a></li>
+          <li class="dropdown"><a href="#"><span>“约起来”</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="page1-1.html">寻找摄影师</a></li>
+              <li><a href="page2-1.html">寻找模特</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="1/first.html">关于我们</a></li>
+          <li><a class="nav-link scrollto" href="1/first.html">登录/注册</a></li>
+          <li><a class="nav-link scrollto" href="page1-5.html">个人中心</a></li>
+          <li><a class="nav-link scrollto" data-toggle="modal" data-target="#myModal" href="page1-6.html">发布邀请</a></li>
+
+            </ul>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+<main id="main">
+
+
+<!-- 发布邀请 -->
+<!-- 弹窗结构 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body custom-modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="title" class="form-label">标题</label>
+            <input type="text" class="form-control" id="title" placeholder="请输入标题">
+          </div>
+          <div class="mb-3">
+            <label for="content" class="form-label">正文</label>
+            <textarea class="form-control" id="content" rows="3" placeholder="请输入正文"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="imageUpload" class="form-label">选择图片上传</label>
+            <input type="file" class="form-control-file" id="imageUpload">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary" id="publishButton">发布</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+
+      <!-- 发布邀请 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+      <script>
+        document.getElementById("publishButton").addEventListener("click", function() {
+          // 这里可以添加发布逻辑，例如获取输入的标题、正文和图片信息，并将其提交到后台
+          var title = document.getElementById("title").value;
+          var content = document.getElementById("content").value;
+          var image = document.getElementById("imageUpload").files[0];
+
+          // 在这里执行上传图片的操作，可以使用XMLHttpRequest或fetch API等进行异步请求
+          // 以下只是一个简单的示例，可以根据需要进行修改
+          var formData = new FormData();
+          formData.append("title", title);
+          formData.append("content", content);
+          formData.append("image", image);
+
+          // 使用fetch API进行异步请求
+          fetch("your-upload-endpoint", {
+            method: "POST",
+            body: formData
+          })
+          .then(response => response.json())
+          .then(data => {
+            // 处理服务器返回的响应数据
+            console.log(data);
+            // 如果需要，可以在这里进行页面重定向或其他操作
+          })
+          .catch(error => {
+            // 处理错误
+            console.error(error);
+          });
+        });
+      </script>
+
+</body>
+
+</html>
